@@ -9,8 +9,7 @@ import os
 os.environ['AWS_DEFAULT_REGION'] = 'us-east-1'
 
 # Replace API_KEY with your own Yelp Fusion API key
-#API_KEY = "unlzTaPeWmWQJszaAdtrFbENwdLrjkS9O5wSAShEnvbgHUG-oN62efMyPi2KbQyG4kbG00mVUt5OTcbYgjLGkQZM3c02Aj6nAuUY5AG3SUDmLMAfJA1PL2PXBLbvY3Yx"
-API_KEY = "oFAptG_pBo6s9OEfWKBfmVBGZK_aLFjlNhsS34f8Ese_4EfuS9Mf4fsuG63xnv8qr8AVhe1mm1Qd0zrHDS-tiIKV-3SP6jNpUMDVBUIP6Fz0UcLjt-JglhIIEKn7Y3Yx"
+API_KEY = "*"
 # Base URL for the Yelp Fusion API
 BASE_URL = "https://api.yelp.com/v3/businesses/search"
 
@@ -25,8 +24,8 @@ headers = {
 
 # Connect to the DynamoDB table
 dynamodb = boto3.resource("dynamodb", 
-         aws_access_key_id='AKIAZITNUAB4BNZPFYPY',
-         aws_secret_access_key='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')
+         aws_access_key_id='*',
+         aws_secret_access_key='*')
 table = dynamodb.Table("yelp-restaurant-data")
 
 # Keep track of the total number of restaurants returned by the API
